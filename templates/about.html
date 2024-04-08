@@ -1,0 +1,30 @@
+{% extends "main.html" %}
+{% block menu %}
+    <h1 style="color: black; text-align: center; font-size: 40px; margin-top: 1%"><b>О блоге</b></h1>
+    <div class="container-xxl" style="margin-top: 1%; margin-bottom: 1%">
+        <div class="row align-items-start">
+            <div class="col">
+                <div class="bg-image card shadow-1-strong"
+                     style="border-radius: 30px; border-width: 10px; border-color: black;background: #181a1e">
+                    <div class="card-body" align="justify">
+                        <h1 align="center" style="color: #e7a933; font-size: 60px"><b>{{ info.title }}</b></h1>
+                        <hr style="color: #d1dfff; border-width: 6px;">
+                        <h2 style="color: #e8c176"> {{ info.text }}</h2>
+                        <h3 style="color: #bdf8f6; text-align: center">
+                            EMAIL - <b style="color: #2dc9c4;"> {{ info.contacts.email }}</b>
+                        </h3>
+                        <center>
+                            <a class="navbar-brand" href="{{ info.contacts.github }}" style="color: deepskyblue">
+                                <button type="button" class="btn btn-primary"
+                                        style="background: #282931; color: #e7a933; border-color: black;
+                                         border-radius: 10px; border-width: 4px; font-size: 40px">
+                                    <b>GITHUB</b>
+                                </button>
+                            </a>
+                        </center>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock menu %}
